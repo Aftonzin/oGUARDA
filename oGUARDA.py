@@ -43,7 +43,7 @@ def oguarda():
     pygame.mixer.music.load('music/melodia.mp3')
     pygame.mixer.music.play()
     print('\n \n')
-    print('='*90)
+    print('='*93)
     print()
     print ((' '*29) , '-----O guarda está repousando-----')
     print()
@@ -66,7 +66,7 @@ def oguarda():
     limpartela()
 
     print('\n \n')
-    print('='*90)
+    print('='*93)
     print()
     print()
     print ((' '*50) , 'Alto lá!')
@@ -89,7 +89,7 @@ def oguarda():
     limpartela()
 
     print('\n \n')
-    print('='*90)
+    print('='*93)
     print()
     print()
     print(' '*50 , f'{vermelho}Não deixarei ninguém passar!{limpo}')
@@ -139,7 +139,7 @@ def oguarda():
 
             escolha = '0'
             print('\n \n')
-            print('='*90)
+            print('='*93)
             print()
             print(' '*41 , 'EM BATALHA!')
             print(' '*43 , f'{ciano}TURNO {turno}{limpo}')
@@ -165,7 +165,7 @@ def oguarda():
                 limpartela()
                 gvida -= dano
                 print('\n \n')
-                print('='*90)
+                print('='*93)
                 print()
                 print(' '*40 , 'Você atacou!')
                 print(' '*43 , f'{ciano}TURNO {turno}{limpo}')
@@ -222,7 +222,7 @@ def oguarda():
             curavalor = random.randint(20 , 30)
 
             print('\n \n')
-            print('='*90)
+            print('='*93)
             print()
             print(' '*41 , 'ELE ATACOU!')
             print(' '*43 , f'{vermelho}TURNO {turno}{limpo}')
