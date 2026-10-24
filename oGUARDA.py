@@ -18,7 +18,6 @@ if hasattr(sys.stderr, "reconfigure"):
 
 pygame.init()
 pygame.mixer.init()
-pygame.mixer.music.set_volume(0.4)
 
 def limpartela():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -40,8 +39,9 @@ def oguarda():
     curaquant = 3
 
 # ENTRADA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    pygame.mixer.music.load('music/melodia.mp3')
-    pygame.mixer.music.play()
+    pygame.mixer.music.load('music/intro.wav')
+    pygame.mixer.music.set_volume(0.5)
+    pygame.mixer.music.play(-1)
     print('\n \n')
     print('='*93)
     print()
@@ -88,6 +88,10 @@ def oguarda():
 
     limpartela()
 
+    pygame.mixer.music.load('music/meio.wav')
+    pygame.mixer.music.set_volume(0.4)
+    pygame.mixer.music.play(-1)
+
     print('\n \n')
     print('='*93)
     print()
@@ -111,9 +115,10 @@ def oguarda():
 
     limpartela()
 
-    pygame.mixer.music.load('music/boss.mp3')
-    pygame.mixer.music.play()
-    pygame.mixer.music.set_volume(0.3)
+    pygame.mixer.music.load('music/batalha.wav')
+    pygame.mixer.music.set_volume(0.4)
+    pygame.mixer.music.play(-1)
+
 #FIM DA ENTRADA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     #checagem de turnos
@@ -250,7 +255,8 @@ def oguarda():
 #vencendo, morrendo ou empatando
         if gvida <= 0:
             limpartela()
-            pygame.mixer.music.load('music/ganhou.mp3')
+            pygame.mixer.music.load('music/ganhou.wav')
+            pygame.mixer.music.set_volume(0.3)
             pygame.mixer.music.play()
             print(f'\nSua vida : {vida}' )
             print(f'Vida do Guarda : {gvida}\n')
@@ -264,6 +270,7 @@ def oguarda():
         if vida <= 0:
             limpartela()
             pygame.mixer.music.load('music/perdeu.mp3')
+            pygame.mixer.music.set_volume(0.3)
             pygame.mixer.music.play()
             print(f'Sua vida : {vida}' )
             print(f'Vida do Guarda : {gvida}\n')
